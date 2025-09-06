@@ -2,6 +2,17 @@ plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
 }
 
-rootProject.name = 'borrowed-pages'
+rootProject.name = 'borrowedpages-microservices'
 
-include ':config-service'
+// Infrastructure services
+include ':infrastructure:gateway'
+include ':infrastructure:config'
+include ':infrastructure:discovery'
+
+// Business services
+include ':services:user'
+include ':services:catalog'
+
+// Shared modules
+include ':shared:common'
+include ':shared:security'

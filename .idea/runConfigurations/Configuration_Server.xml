@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Configuration Server" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="org.borrowedpages.cloudconfig.ConfigServerApplication" />
-    <module name="borrowed-pages.config-service.main" />
+    <module name="borrowedpages-microservices.infrastructure.config.main" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="org.borrowedpages.cloudconfig.*" />

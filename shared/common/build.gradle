@@ -1,0 +1,4 @@
+plugins {
+//    id 'org.borrowedpages.microservice'
+    id 'org.borrowedpages.shared-library'
+}

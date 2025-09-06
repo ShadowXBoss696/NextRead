@@ -2,11 +2,17 @@ plugins {
     id 'groovy-gradle-plugin'
 }
 
+rootProject.file('../versions.properties').withInputStream { stream ->
+    def properties = new Properties()
+    properties.load(stream)
+    properties.each { key, value -> ext.set("${key}", value) }
+}
+
 repositories {
     gradlePluginPortal()
 }
 
 dependencies {
-    implementation 'org.springframework.boot:org.springframework.boot.gradle.plugin:3.5.5'
+    implementation "org.springframework.boot:org.springframework.boot.gradle.plugin:${springBootVersion}"
     implementation 'io.spring.dependency-management:io.spring.dependency-management.gradle.plugin:1.1.7'
 }
