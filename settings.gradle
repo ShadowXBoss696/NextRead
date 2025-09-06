@@ -4,4 +4,4 @@ plugins {
 
 rootProject.name = 'borrowed-pages'
 
-include ':demo-service'
+include ':config-service'
