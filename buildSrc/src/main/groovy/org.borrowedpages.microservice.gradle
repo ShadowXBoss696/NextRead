@@ -1,0 +1,9 @@
+plugins {
+    id 'org.borrowedpages.common'
+    id 'org.springframework.boot'
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+}

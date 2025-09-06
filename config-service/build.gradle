@@ -1,5 +1,5 @@
 plugins {
-    id 'org.borrowedpages.common'
+    id 'org.borrowedpages.microservice'
 }
 
 dependencies {

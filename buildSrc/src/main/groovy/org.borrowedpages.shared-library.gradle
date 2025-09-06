@@ -1,0 +1,4 @@
+plugins {
+    id 'org.borrowedpages.common'
+    id 'java-library'
+}

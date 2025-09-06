@@ -1,11 +1,10 @@
 plugins {
-    id 'org.springframework.boot'
-    id 'io.spring.dependency-management'
     id 'java'
     id 'idea'
+    id 'io.spring.dependency-management'
 }
 
-group = 'org.borrowedpages.microservice'
+group = 'org.borrowedpages'
 version = '0.0.1-SNAPSHOT'
 
 java {
@@ -24,6 +23,23 @@ ext {
     set('springDocOpenApiVersion', "2.8.9")
 }
 
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+dependencies {
+    implementation 'org.apache.commons:commons-lang3:3.18.0'
+    implementation 'commons-io:commons-io:2.20.0'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
 dependencyManagement {
     imports {
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
@@ -33,7 +49,11 @@ dependencyManagement {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
-    options.compilerArgs += ["-parameters" /*, '-Xlint:unchecked', '-Xlint:deprecation'*/]
+    options.compilerArgs += [
+        '-parameters',          // Preserve parameter names for reflection
+        '-Xlint:unchecked',     // Enable unchecked operation warnings
+        '-Xlint:deprecation'    // Enable deprecation warnings
+    ]
 }
 
 tasks.named('test') {
