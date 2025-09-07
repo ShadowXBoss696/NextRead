@@ -5,14 +5,14 @@ plugins {
 rootProject.name = 'borrowedpages-microservices'
 
 // Infrastructure services
-// include ':infrastructure:gateway'
+include ':infrastructure:gateway'
 include ':infrastructure:config'
-// include ':infrastructure:discovery'
+include ':infrastructure:discovery'
 
 // Business services
-// include ':services:user'
-// include ':services:catalog'
+include ':services:user'
+include ':services:catalog'
 
 // Shared modules
-// include ':shared:common'
-// include ':shared:security'
+include ':shared:common'
+include ':shared:security'
