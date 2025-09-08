@@ -1,10 +1,10 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="API Gateway" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="org.borrowedpages.gateway.ApiGatewayApplication" />
-    <module name="borrowedpages-microservices.infrastructure.gateway.main" />
+    <option name="MAIN_CLASS_NAME" value="io.nextread.gateway.ApiGatewayApplication" />
+    <module name="nextread-backend.infrastructure.gateway.main" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="org.borrowedpages.gateway.*" />
+        <option name="PATTERN" value="io.nextread.gateway.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>

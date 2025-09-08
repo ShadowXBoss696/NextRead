@@ -1,4 +1,4 @@
-package org.borrowedpages.gateway;
+package io.nextread.discovery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

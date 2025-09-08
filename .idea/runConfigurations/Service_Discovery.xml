@@ -1,10 +1,10 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Service Discovery" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="org.borrowedpages.gateway.EurekaServerApplication" />
-    <module name="borrowedpages-microservices.infrastructure.discovery.main" />
+    <option name="MAIN_CLASS_NAME" value="io.nextread.discovery.EurekaServerApplication" />
+    <module name="nextread-backend.infrastructure.discovery.main" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="org.borrowedpages.gateway.*" />
+        <option name="PATTERN" value="io.nextread.discovery.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>

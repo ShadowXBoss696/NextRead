@@ -1,10 +1,10 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Configuration Server" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="org.borrowedpages.cloudconfig.ConfigServerApplication" />
-    <module name="borrowedpages-microservices.infrastructure.config.main" />
+    <option name="MAIN_CLASS_NAME" value="io.nextread.cloudconfig.ConfigServerApplication" />
+    <module name="nextread-backend.infrastructure.config.main" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="org.borrowedpages.cloudconfig.*" />
+        <option name="PATTERN" value="io.nextread.cloudconfig.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>

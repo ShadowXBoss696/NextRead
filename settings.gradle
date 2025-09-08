@@ -2,7 +2,7 @@ plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
 }
 
-rootProject.name = 'borrowedpages-microservices'
+rootProject.name = 'nextread-backend'
 
 // Infrastructure services
 include ':infrastructure:gateway'

@@ -10,8 +10,8 @@ rootProject.file('versions.properties').withInputStream { stream ->
     properties.each { key, value -> ext.set("${key}", value) }
 }
 
-group = 'org.borrowedpages'
-version = '0.0.1-SNAPSHOT'
+group = 'io.nextread.app'
+version = '0.0.3-SNAPSHOT'
 
 java {
     toolchain {
