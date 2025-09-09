@@ -4,15 +4,19 @@ plugins {
 
 rootProject.name = 'nextread-backend'
 
-// Infrastructure services
-include ':infrastructure:gateway'
-include ':infrastructure:config'
-include ':infrastructure:discovery'
+includeBuild('build-logic')
 
-// Business services
-include ':services:user'
-include ':services:catalog'
+include(
+    // Infrastructure services
+    ':api-gateway',
+    ':discovery-service',
+    ':config-server',
 
-// Shared modules
-include ':shared:common'
-include ':shared:security'
+    // Business services
+    ':user-service',
+    ':catalog-service',
+
+    // Shared modules
+    ':shared-common',
+    ':shared-security'
+)
