@@ -10,7 +10,7 @@ rootProject.file('versions.properties').withInputStream { stream ->
     properties.each { key, value -> ext.set("${key}", value) }
 }
 
-group = 'io.nextread.app'
+group = 'com.bookcorner.api'
 version = '0.0.3-SNAPSHOT'
 
 java {

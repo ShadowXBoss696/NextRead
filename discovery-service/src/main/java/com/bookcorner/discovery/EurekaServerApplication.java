@@ -1,4 +1,4 @@
-package io.nextread.discovery;
+package com.bookcorner.discovery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

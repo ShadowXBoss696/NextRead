@@ -1,4 +1,4 @@
-package io.nextread.gateway;
+package com.bookcorner.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

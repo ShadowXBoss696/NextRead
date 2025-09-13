@@ -1,4 +1,4 @@
 plugins {
-    id 'io.nextread.common'
+    id 'com.bookcorner.common'
     id 'java-library'
 }

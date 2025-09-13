@@ -1,4 +1,4 @@
-package io.nextread.cloudconfig;
+package com.bookcorner.cloudconfig;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

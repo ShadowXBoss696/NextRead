@@ -1,5 +1,5 @@
 plugins {
-    id 'io.nextread.service'
+    id 'com.bookcorner.service'
 }
 
 dependencies {
