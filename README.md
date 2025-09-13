@@ -5,16 +5,16 @@
   </picture>
 </p>
 
-[![License](https://img.shields.io/github/license/ShadowXBoss696/The-Book-Corner)](https://github.com/ShadowXBoss696/The-Book-Corner/blob/main/LICENSE)
-[![Contributors](https://img.shields.io/github/contributors/ShadowXBoss696/The-Book-Corner)](https://github.com/ShadowXBoss696/The-Book-Corner/graphs/contributors)
-[![Commit Activity](https://img.shields.io/github/commit-activity/m/ShadowXBoss696/The-Book-Corner)](https://github.com/ShadowXBoss696/The-Book-Corner/graphs/commit-activity)
-[![Last Commit](https://img.shields.io/github/last-commit/ShadowXBoss696/The-Book-Corner)](https://github.com/ShadowXBoss696/The-Book-Corner/network)
+[![License](https://img.shields.io/github/license/ShadowXBoss696/Book-Corner)](https://github.com/ShadowXBoss696/Book-Corner/blob/main/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/ShadowXBoss696/Book-Corner)](https://github.com/ShadowXBoss696/Book-Corner/graphs/contributors)
+[![Commit Activity](https://img.shields.io/github/commit-activity/m/ShadowXBoss696/Book-Corner)](https://github.com/ShadowXBoss696/Book-Corner/graphs/commit-activity)
+[![Last Commit](https://img.shields.io/github/last-commit/ShadowXBoss696/Book-Corner)](https://github.com/ShadowXBoss696/Book-Corner/network)
 
 ---
 
 Roadmap: [Scalable E-Commerce Platform - Roadmap.sh](https://roadmap.sh/projects/scalable-ecommerce-platform)
 
-Documentation: [The Book Corner Wiki](https://github.com/ShadowXBoss696/The-Book-Corner/wiki)
+Documentation: [The Book Corner Wiki](https://github.com/ShadowXBoss696/Book-Corner/wiki)
 
 ---
 
