@@ -1,0 +1,39 @@
+bookcorner/
+├── core/
+│   ├── customer/
+│   ├── catalog/
+│   ├── cart/
+│   ├── order/
+│   ├── inventory/
+├── integration/
+│   ├── payment/
+│   ├── shipping/
+│   ├── notification/
+├── infra/
+│   ├── keycloak/
+│   ├── postgres/
+│   ├── redis/
+│   ├── docker-compose.yml
+│   ├── config-server/
+│   ├── discovery-server/
+│   ├── api-gateway/
+├── shared/
+│   ├── common/
+│   ├── jpa/
+├── docs/
+├── build-logic/
+└── scripts/
+
+
+com.bookcorner.cart
+│
+├── config/               # Spring configuration classes (e.g., security, DB, messaging)
+├── controller/           # REST API controllers handling HTTP requests
+├── service/              # Business logic services and transactional boundaries
+├── domain/               # Core domain model: entities, aggregates, value objects
+├── repository/           # JPA repositories or DAO interfaces
+├── dto/                  # Data Transfer Objects for external/internal API communication
+├── mapper/               # Mapping between entities and DTOs (e.g., MapStruct or ModelMapper)
+├── exception/            # Custom exceptions and error handling
+├── event/                # Domain or integration events for event-driven communication
+└── util/                 # Utility classes specific to cart domain
