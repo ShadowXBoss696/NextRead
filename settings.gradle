@@ -8,15 +8,18 @@ includeBuild('build-logic')
 
 include(
     // Infrastructure services
-    ':infrastructure:api-gateway',
-    ':infrastructure:discovery-service',
-    ':infrastructure:config-server',
+    ':config-server'
+
+
+//    ':infrastructure:api-gateway',
+//    ':discovery-service',
+//    ':infrastructure:config-server',
 
     // Business services
-    ':core:user-service',
-    ':core:catalog-service',
+//    ':core:user-service',
+//    ':core:catalog-service',
 
     // Shared modules
-    ':shared:shared-common',
-    ':shared:shared-security'
+//    ':shared:shared-common',
+//    ':shared:shared-security'
 )

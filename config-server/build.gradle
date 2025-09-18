@@ -1,0 +1,14 @@
+plugins {
+    id 'com.bookcorner.service'
+}
+
+dependencies {
+    implementation 'org.springframework.cloud:spring-cloud-config-server'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+}
+
+// Exclude config client and eureka client dependencies to avoid conflicts in the config server
+configurations.configureEach {
+    exclude group: 'org.springframework.cloud', module: 'spring-cloud-starter-config'
+    exclude group: 'org.springframework.cloud', module: 'spring-cloud-starter-netflix-eureka-client'
+}
