@@ -1,13 +1,22 @@
-# Global Configuration
+# =================================================================
+# Spring Global Service Configuration
+# =================================================================
 
+# Server Configuration
+server:
+  port: 0  # Random port assignment for each service instance
+
+# =================================================================
+# Service Discovery Configuration
+# =================================================================
+
+# Eureka Client Configuration
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
   instance:
     prefer-ip-address: true
-
-server:
-  port: 0  # Random port assignment for each service instance

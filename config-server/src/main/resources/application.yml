@@ -1,3 +1,12 @@
+# =================================================================
+# Spring Cloud Config Server Configuration
+# =================================================================
+
+# Server Configuration
+server:
+  port: 8888
+
+# Application Configuration
 spring:
   application:
     name: config-server
@@ -5,16 +14,50 @@ spring:
   profiles:
     active: native
 
+  # Spring Cloud Config Server Settings
   cloud:
     config:
       server:
         native:
           search-locations: classpath:/shared
 
+  # Basic Security Configuration
   security:
     user:
-      name: admin
-      password: admin123
+      name: ${CONFIG_SERVER_USERNAME:admin}
+      password: ${CONFIG_SERVER_PASSWORD:admin123}
 
-server:
-  port: 8888
+# =================================================================
+# Service Discovery & Health Configuration
+# =================================================================
+
+# Eureka Client Configuration
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka/}
+    healthcheck:
+      enabled: true
+
+  instance:
+    prefer-ip-address: true
+    health-check-url-path: /actuator/health
+    status-page-url-path: /actuator/info
+
+# =================================================================
+# Monitoring & Management Configuration
+# =================================================================
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,configprops
+  endpoint:
+    health:
+      show-details: when-authorized
+  info:
+    env:
+      enabled: true

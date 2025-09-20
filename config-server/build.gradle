@@ -7,8 +7,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
 }
 
-// Exclude config client and eureka client dependencies to avoid conflicts in the config server
+// Exclude certain dependencies to avoid conflicts with other services
 configurations.configureEach {
     exclude group: 'org.springframework.cloud', module: 'spring-cloud-starter-config'
-    exclude group: 'org.springframework.cloud', module: 'spring-cloud-starter-netflix-eureka-client'
 }
