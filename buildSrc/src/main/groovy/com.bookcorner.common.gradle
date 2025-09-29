@@ -4,7 +4,7 @@ plugins {
     id 'io.spring.dependency-management'
 }
 
-rootProject.file('versions.properties').withInputStream { stream ->
+rootProject.file('./buildSrc/versions.properties').withInputStream { stream ->
     def properties = new Properties()
     properties.load(stream)
     properties.each { key, value -> ext.set("${key}", value) }

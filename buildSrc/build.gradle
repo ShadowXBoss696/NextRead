@@ -2,7 +2,7 @@ plugins {
     id 'groovy-gradle-plugin'
 }
 
-rootProject.file('../versions.properties').withInputStream { stream ->
+rootProject.file('./versions.properties').withInputStream { stream ->
     def properties = new Properties()
     properties.load(stream)
     properties.each { key, value -> ext.set("${key}", value) }

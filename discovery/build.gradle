@@ -8,6 +8,5 @@ dependencies {
 
 // Exclude certain dependencies to avoid conflicts with other services
 configurations.configureEach {
-    exclude group: 'org.springframework.cloud', module: 'spring-cloud-starter-config'
     exclude group: 'org.springframework.cloud', module: 'spring-cloud-starter-netflix-eureka-client'
 }

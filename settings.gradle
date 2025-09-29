@@ -2,14 +2,19 @@ plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
 }
 
-rootProject.name = 'bookcorner-microservices'
+rootProject.name = 'bookcorner-api'
 
-includeBuild('build-logic')
+include ':discovery'
 
-include(
+
+
+
+// include(
+
     // Infrastructure services
-    ':config-server',
-    ':discovery-service'
+//    ':api-gateway',
+//    ':config-server',
+//    ':discovery-service'
 
 
 //    ':infrastructure:api-gateway',
@@ -23,4 +28,4 @@ include(
     // Shared modules
 //    ':shared:shared-common',
 //    ':shared:shared-security'
-)
+//)

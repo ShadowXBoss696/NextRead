@@ -7,7 +7,7 @@ server:
   port: 0  # Random port assignment for each service instance
 
 # =================================================================
-# Service Discovery Configuration
+# Service Discovery & Health Configuration
 # =================================================================
 
 # Eureka Client Configuration
@@ -16,7 +16,29 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka/}
+    healthcheck:
+      enabled: true
 
   instance:
     prefer-ip-address: true
+#    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instance-id: ${spring.cloud.client.hostname}:${HOSTNAME}
+    health-check-url-path: /actuator/health
+    status-page-url-path: /actuator/info
+
+# =================================================================
+# Monitoring & Management Configuration
+# =================================================================
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,configprops
+  endpoint:
+    health:
+      show-details: when-authorized
+  info:
+    env:
+      enabled: true
