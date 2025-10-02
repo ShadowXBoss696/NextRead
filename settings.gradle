@@ -3,25 +3,3 @@ plugins {
 }
 
 rootProject.name = 'bookcorner-api'
-
-//include ':discovery'
-//include ':gateway'
-//
-//include ':shared:common'
-
-
-// include(
-
-    // Infrastructure services
-//    ':api-gateway',
-//    ':config-server',
-//    ':discovery-service'
-
-    // Business services
-//    ':core:user-service',
-//    ':core:catalog-service',
-
-    // Shared modules
-//    ':shared:shared-common',
-//    ':shared:shared-security'
-//)

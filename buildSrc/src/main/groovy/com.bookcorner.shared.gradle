@@ -1,4 +1,0 @@
-plugins {
-    id 'com.bookcorner.common'
-    id 'java-library'
-}
