@@ -1,0 +1,28 @@
+# =================================================================
+# Spring Configuration
+# =================================================================
+
+# Application Configuration
+spring:
+  application:
+    name: book-corner-api
+
+# Server Configuration
+server:
+  port: 8080
+
+# =================================================================
+# Monitoring & Management Configuration
+# =================================================================
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,configprops
+  endpoint:
+    health:
+      show-details: when-authorized
+  info:
+    env:
+      enabled: true
