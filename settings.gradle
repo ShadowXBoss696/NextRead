@@ -4,9 +4,10 @@ plugins {
 
 rootProject.name = 'bookcorner-api'
 
-include ':discovery'
-
-
+//include ':discovery'
+//include ':gateway'
+//
+//include ':shared:common'
 
 
 // include(
@@ -15,11 +16,6 @@ include ':discovery'
 //    ':api-gateway',
 //    ':config-server',
 //    ':discovery-service'
-
-
-//    ':infrastructure:api-gateway',
-//    ':discovery-service',
-//    ':infrastructure:config-server',
 
     // Business services
 //    ':core:user-service',

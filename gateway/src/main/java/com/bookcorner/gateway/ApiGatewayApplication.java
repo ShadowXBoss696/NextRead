@@ -1,8 +1,10 @@
 package com.bookcorner.gateway;
 
+import com.bookcorner.common.Globals;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * API Gateway Application
@@ -13,6 +15,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @author BookCorner Team
  */
 @SpringBootApplication
+@ComponentScan(basePackages = Globals.BASE_PACKAGE)
 @EnableDiscoveryClient
 public class ApiGatewayApplication {
 
