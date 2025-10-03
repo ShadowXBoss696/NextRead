@@ -9,18 +9,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/v1/books")
 public class BookController {
 
-    @GetMapping("/")
+    @GetMapping
     public List<BookSummary> searchBooks() {
         return new ArrayList<>();
     }
 
     @GetMapping("/{bookId}")
-    public BookDetails getBookDetails(@PathVariable("bookId") String bookId) {
+    public BookDetails getBookDetails(@PathVariable("bookId") UUID bookId) {
         return null;
     }
 }
