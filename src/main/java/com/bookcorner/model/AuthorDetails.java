@@ -1,4 +1,4 @@
-package com.bookcorner.models;
+package com.bookcorner.model;
 
 public class AuthorDetails {
 }

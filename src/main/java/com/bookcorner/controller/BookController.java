@@ -1,27 +1,26 @@
 package com.bookcorner.controller;
 
-import com.bookcorner.models.BookDetails;
-import com.bookcorner.models.BookSummary;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.bookcorner.model.BookDetails;
+import com.bookcorner.model.BookSummary;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/v1/books")
 public class BookController {
 
-    @GetMapping
-    public List<BookSummary> searchBooks() {
-        return new ArrayList<>();
+    @GetMapping("/search")
+    public Page<BookSummary> searchBooks(@RequestParam String q, Pageable pageable) {
+        return new PageImpl<>(new ArrayList<>());
     }
 
-    @GetMapping("/{bookId}")
-    public BookDetails getBookDetails(@PathVariable("bookId") UUID bookId) {
+    @GetMapping("/{bookId}/details")
+    public BookDetails getBookDetails(@PathVariable UUID bookId) {
         return null;
     }
 }
