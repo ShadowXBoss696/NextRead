@@ -2,25 +2,28 @@ package com.bookcorner.controller;
 
 import com.bookcorner.model.AuthorDetails;
 import com.bookcorner.model.AuthorSummary;
+import com.bookcorner.service.AuthorService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/v1/authors")
+@RequiredArgsConstructor
 public class AuthorController {
+
+    private final AuthorService authorService;
 
     @GetMapping("/search")
     public Page<AuthorSummary> searchAuthors(@RequestParam String q, Pageable pageable) {
-        return new PageImpl<>(new ArrayList<>());
+        return authorService.searchAuthors(q, pageable);
     }
 
     @GetMapping("/{authorId}/details")
     public AuthorDetails getAuthorDetails(@PathVariable UUID authorId) {
-        return null;
+        return authorService.getAuthorDetails(authorId);
     }
 }
