@@ -4,6 +4,7 @@ import com.bookcorner.model.BookDetails;
 import com.bookcorner.model.BookSummary;
 import com.bookcorner.service.BookService;
 import lombok.RequiredArgsConstructor;
+import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +19,7 @@ public class BookController {
     private final BookService bookService;
 
     @GetMapping("/search")
-    public Page<BookSummary> searchBooks(@RequestParam String q, Pageable pageable) {
+    public Page<BookSummary> searchBooks(@RequestParam String q, @ParameterObject Pageable pageable) {
         return bookService.searchBooks(q, pageable);
     }
 
